@@ -1,6 +1,5 @@
 #include <dht.h>
 
-
 #define dht_apin A0 // Analog Pin sensor is connected to
  
 dht DHT;
@@ -74,7 +73,7 @@ void loop() {
   
 }
 
-//Still in progress - writing some code that will allow for the fan speed to change gradually, as opposed to suddenly
+//Still in progress - writing a function that will allow for the fan speed to change gradually, as opposed to suddenly
 void speedUp(int current, int target){
   for (int i = current; i <= target; i++) {
     analogWrite(en_12, i);
